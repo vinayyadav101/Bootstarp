@@ -36,32 +36,47 @@
         .home {
             background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%)
         }
-        .fourCard > div:hover{
-            .fourCardIcon{
+
+        .fourCard>div:hover {
+            .fourCardIcon {
                 background-color: blue;
             }
         }
-        .fourCardIcon{
-            background-color:color-mix(in srgb, var(--accent-color), transparent 92%);
+
+        .fourCardIcon {
+            background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
         }
-        .aboutImage2{
-            max-width: 60vw; 
-            max-height: 30vh; 
-            border-radius: 20px; 
+
+        .aboutImage2 {
+            max-width: 60vw;
+            max-height: 30vh;
+            border-radius: 20px;
             border: 8px solid white;
             position: absolute;
             top: 30% !important;
             left: -10% !important;
 
         }
-        .aboutImage1{
-            height: 65vh; 
+
+        .aboutImage1 {
+            height: 65vh;
             width: 50vw;
             border-radius: 20px;
         }
-        .aboutDetails > div{
-            padding-right: 3rem ;
+
+        .aboutDetails>div {
+            padding-right: 3rem;
         }
+
+        .carousel-indicators {
+            height: auto;
+            width: 30vw;
+            background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+            border-radius: 30px;
+            margin: 0;
+        }
+
+
 
         @media (max-width: 576px) {
             .offcanvas {
@@ -70,6 +85,10 @@
 
             .home>div {
                 flex-wrap: wrap;
+            }
+
+            .featuresContainer {
+                flex-wrap: wrap-reverse;
             }
 
             .card>div {
@@ -83,22 +102,29 @@
             .card-body>span {
                 padding-left: 0;
             }
-            .aboutImage1{
+
+            .aboutImage1 {
                 width: 100%;
                 height: 50%;
                 margin-bottom: 3%;
             }
-            .aboutImage2{
+
+            .aboutImage2 {
                 max-width: 100vw;
                 width: 100%;
                 border: none;
                 position: static;
             }
-            .aboutDetails > div {
+
+            .aboutDetails>div {
                 padding-right: 0px;
             }
-            .aboutSection{
+
+            .aboutSection {
                 flex-wrap: wrap;
+            }
+            .carousel-indicators{
+                width: auto;
             }
         }
     </style>
@@ -106,7 +132,7 @@
 
 
 <body>
-    <nav class="navbar navbar-expand-lg  position-fixed  w-100 mt-2 z-2">
+    <nav class="navbar navbar-expand-lg  position-fixed  w-100 mt-2 z-1">
         <div class="container-fluid mx-5 rounded-pill shadow bg-body-tertiary py-2 px-3">
             <a class="navbar-brand" href="#">Navbar</a>
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
@@ -168,7 +194,7 @@
                         <path
                             d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
                     </svg>
-                    
+
                     Working for Your Success
                 </span>
                 <div class="p-2 me-5 mt-4">
@@ -180,8 +206,8 @@
                     fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
 
                 <div class="d-flex gap-4 align-items-center p-2 me-5 mt-4">
-                    <a class="btn btn-primary disabled rounded-pill" role="button" aria-disabled="true" >Get Started</a>
-                    <span >
+                    <a class="btn btn-primary disabled rounded-pill" role="button" aria-disabled="true">Get Started</a>
+                    <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-play-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
@@ -206,171 +232,423 @@
         <div class=" card d-flex flex-row justify-content-between mx-5 p-5 shadow flex-wrap my-5 fourCard">
 
             <div class="d-flex flex-coloum align-items-center justify-content-center flex-wrap">
-                <div class="p-4 rounded-circle fourCardIcon"
-                    >
+                <div class="p-4 rounded-circle fourCardIcon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-trophy" viewBox="0 0 16 16">
                         <path
                             d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935M3.504 1q.01.775.056 1.469c.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.5.5 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667q.045-.694.056-1.469z" />
                     </svg>
                 </div>
-                
-                    <div class="card-body">
-                        <h5 class="card-title">3x Won Awards</h5>
-                        <p style="color: color-mix(in srgb, var(--default-color), transparent 40%);">Vestibulum ante
-                            ipsum</p>
-                    </div>
 
-
-            </div>
-
-
-            <div class="d-flex flex-coloum align-items-center justify-content-center flex-wrap">
-                <div class="p-4 rounded-circle fourCardIcon"
-                    >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
-                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
-                      </svg>
+                <div class="card-body">
+                    <h5 class="card-title">3x Won Awards</h5>
+                    <p style="color: color-mix(in srgb, var(--default-color), transparent 40%);">Vestibulum ante
+                        ipsum</p>
                 </div>
-                
-                    <div class="card-body">
-                        <h5 class="card-title">6.5k Faucibus</h5>
-                        <p style="color: color-mix(in srgb, var(--default-color), transparent 40%);">Nullam quits ante</p>
-                    </div>
-                
+
 
             </div>
 
 
             <div class="d-flex flex-coloum align-items-center justify-content-center flex-wrap">
-                <div class="p-4 rounded-circle fourCardIcon"
-                    >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/>
-                      </svg>
-                    </div>
-               
-                    <div class="card-body">
-                        <h5 class="card-title">80k Mauris</h5>
-                        <p style="color: color-mix(in srgb, var(--default-color), transparent 40%);">Etiam sit amet orci</p>
-                    </div>
-            
-
-            </div>
-
-
-            <div class="d-flex flex-coloum align-items-center justify-content-center flex-wrap">
-                <div class="p-4 rounded-circle fourCardIcon"
-                    >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
-                        <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z"/>
-                        <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
-                      </svg>
+                <div class="p-4 rounded-circle fourCardIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-briefcase" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
+                    </svg>
                 </div>
-                
-                    <div class="card-body">
-                        <h5 class="card-title">6x Phasellus</h5>
-                        <p style="color: color-mix(in srgb, var(--default-color), transparent 40%);">Vestibulum ante
-                            ipsum</p>
-                    </div>
-               
+
+                <div class="card-body">
+                    <h5 class="card-title">6.5k Faucibus</h5>
+                    <p style="color: color-mix(in srgb, var(--default-color), transparent 40%);">Nullam quits ante</p>
+                </div>
+
+
+            </div>
+
+
+            <div class="d-flex flex-coloum align-items-center justify-content-center flex-wrap">
+                <div class="p-4 rounded-circle fourCardIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-graph-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07" />
+                    </svg>
+                </div>
+
+                <div class="card-body">
+                    <h5 class="card-title">80k Mauris</h5>
+                    <p style="color: color-mix(in srgb, var(--default-color), transparent 40%);">Etiam sit amet orci</p>
+                </div>
+
+
+            </div>
+
+
+            <div class="d-flex flex-coloum align-items-center justify-content-center flex-wrap">
+                <div class="p-4 rounded-circle fourCardIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-award" viewBox="0 0 16 16">
+                        <path
+                            d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z" />
+                        <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z" />
+                    </svg>
+                </div>
+
+                <div class="card-body">
+                    <h5 class="card-title">6x Phasellus</h5>
+                    <p style="color: color-mix(in srgb, var(--default-color), transparent 40%);">Vestibulum ante
+                        ipsum</p>
+                </div>
+
 
             </div>
         </div>
     </section>
 
 
-        <section class="card border-0 about mb-3 p-5 flex-row position-relative aboutSection">
-            <div class="w-100 mt-3 aboutDetails">
-                <div class="card-body mt-2">
-                    <a href="" style="font-size: x-large; font-weight: 600; text-decoration: none;">MORE ABOUT US</a>
-                    <h1 class="card-title mt-3" style="font-weight: 600;">Voluptas enim suscipit temporibus</h1>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla rem animi placeat aliquid mollitia incidunt vel corporis! Dolor dolorum molestiae, illo blanditiis soluta eius quasi ducimus, asperiores nihil distinctio perspiciatis.<p>
-                    <div class="d-flex flex-row flex-wrap py-3 pe-3">
-                        <div class="d-flex flex-row m-3 ms-0 gap-2">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                  </svg>
-                            </span>
-                            <p>Lorem ipsum dolor sit amet</p>
+    <section class="card border-0 about mb-3 p-5 flex-row position-relative aboutSection">
+        <div class="w-100 mt-3 aboutDetails">
+            <div class="card-body mt-2">
+                <a href="" style="font-size: x-large; font-weight: 600; text-decoration: none;">MORE ABOUT US</a>
+                <h1 class="card-title mt-3" style="font-weight: 600;">Voluptas enim suscipit temporibus</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla rem animi placeat
+                    aliquid mollitia incidunt vel corporis! Dolor dolorum molestiae, illo blanditiis soluta eius quasi
+                    ducimus, asperiores nihil distinctio perspiciatis.
+                <p>
+                <div class="d-flex flex-row flex-wrap py-3 pe-3">
+                    <div class="d-flex flex-row m-3 ms-0 gap-2">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </span>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="d-flex flex-row m-3 ms-0 gap-2">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </span>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="d-flex flex-row m-3 ms-0 gap-2">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </span>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="d-flex flex-row m-3 ms-0 gap-2">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </span>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="d-flex flex-row m-3 ms-0 gap-2">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </span>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="d-flex flex-row m-3 ms-0 gap-2">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </span>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row flex-wrap gap-4">
+                    <div class="d-flex flex-row gap-2 align-items-center">
+                        <div>
+                            <img src="./asset/avatar-1.webp" style="max-width: 60px; border-radius: 50%;" alt="">
                         </div>
-                        <div class="d-flex flex-row m-3 ms-0 gap-2">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                  </svg>
-                            </span>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div class="d-flex flex-row m-3 ms-0 gap-2">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                  </svg>
-                            </span>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div class="d-flex flex-row m-3 ms-0 gap-2">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                  </svg>
-                            </span>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div class="d-flex flex-row m-3 ms-0 gap-2">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                  </svg>
-                            </span>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div class="d-flex flex-row m-3 ms-0 gap-2">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                  </svg>
-                            </span>
-                            <p>Lorem ipsum dolor sit amet</p>
+                        <div>
+                            <p class="mb-1">Mario Smith</p>
+                            <p class="mb-1" style="color: #0000ff;">CEO & Founder</p>
                         </div>
                     </div>
-                    <div class="d-flex flex-row flex-wrap gap-4">
-                        <div class="d-flex flex-row gap-2 align-items-center">
-                            <div>
-                                <img src="./asset/avatar-1.webp" style="max-width: 60px; border-radius: 50%;" alt="">
-                            </div>
-                            <div>
-                                <p class="mb-1">Mario Smith</p>
-                                <p class="mb-1" style="color: #0000ff;">CEO & Founder</p>
+                    <div class="d-flex flex-row align-items-center Regular shadow p-3 rounded-4">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-telephone-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                        </div>
+                        <div class="me-5 ms-2">
+                            <p class="mb-1 me-5">Call us anytime</p>
+                            <p class="mb-1 me-5 ">+123 456-789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex w-100 flex-wrap  aboutImages">
+            <div class="position-relative">
+                <img src="./asset/about-5 (1).webp" class="aboutImage1" alt="Responsive Image" alt="...">
+                <img src="./asset/about-2.webp" class="aboutImage2" alt="Responsive Image" alt="...">
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="features card border-0 mb-3 p-5">
+        <div class="heading mb-3">
+            <h1 style="text-align: center;">Features</h1>
+            <p style="text-align: center;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, optio?
+            </p>
+        </div>
+        <div>
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <div
+                            class="carousel-indicators z-0 d-flex gap-2 justify-content-between mb-3 position-relative p-1">
+                            <button
+                                style="width: 100%; background-color:blue; height: 100%; text-indent: 0; border: none; align-self: center; opacity: 1; border-radius: 30px; font-size: larger;"
+                                class="active featuresBtn m-1 p-2" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                aria-label="Slide 1">Lorem</button>
+                            <button
+                                style="width: 100%; background-color:  transparent; height: 100%; text-indent: 0; border: none; align-self: center; opacity: 1; border-radius: 30px; font-size: larger;"
+                                class=" m-1 p-2" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="1" aria-label="Slide 2">deserunt</button>
+                            <button
+                                style="width: 100%; background-color: transparent; height: 100%; text-indent: 0; border: none; align-self: center; opacity: 1; border-radius: 30px; font-size: larger;"
+                                class="m-1 p-2" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="2" aria-label="Slide 3">inventore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card border-0">
+                            <div class="row">
+                                <div class="d-flex featuresContainer ">
+                                    <div class="card-body mt-4 pe-5" style="width: 80%;">
+                                        <h1 class=" pb-3" style="text-align: start;">Lorem ipsum dolor sit amet </h1>
+                                        <div class="my-2" style="border: 2.3px solid blue; margin-right: 80%;"></div>
+                                        <p class="card-text mt-3 mb-4">This is a wider card with supporting text below
+                                            as a natural lead-in to additional content. This content is a little bit
+                                            longer.</p>
+                                        <div class="d-flex gap-2 m-2">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16"
+                                                    style="color: #0000ff;">
+                                                    <path
+                                                        d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                                                    <path
+                                                        d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2 m-2">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16"
+                                                    style="color: #0000ff;">
+                                                    <path
+                                                        d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                                                    <path
+                                                        d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2 m-2">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16"
+                                                    style="color: #0000ff;">
+                                                    <path
+                                                        d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                                                    <path
+                                                        d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor
+                                                    sit amet consectetur adipisicing elit. Expedita libero alias
+                                                    repudiandae dignissimos </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="./asset/features-illustration-3.webp" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-row align-items-center shadow p-3 rounded-4">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16" style="fill: #0000ff;">
-                                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                                  </svg>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card border-0">
+                            <div class="row">
+                                <div class="d-flex featuresContainer ">
+                                    <div class="card-body mt-4 pe-5" style="width: 80%;">
+                                        <h1 class=" pb-3" style="text-align: start;">Lorem ipsum dolor sit amet </h1>
+                                        <div class="my-2" style="border: 2.3px solid blue; margin-right: 80%;"></div>
+                                        <p class="card-text mt-3 mb-4">This is a wider card with supporting text below
+                                            as a natural lead-in to additional content. This content is a little bit
+                                            longer.</p>
+                                        <div class="d-flex gap-2 m-2">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16"
+                                                    style="color: #0000ff;">
+                                                    <path
+                                                        d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                                                    <path
+                                                        d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2 m-2">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16"
+                                                    style="color: #0000ff;">
+                                                    <path
+                                                        d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                                                    <path
+                                                        d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2 m-2">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16"
+                                                    style="color: #0000ff;">
+                                                    <path
+                                                        d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                                                    <path
+                                                        d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor
+                                                    sit amet consectetur adipisicing elit. Expedita libero alias
+                                                    repudiandae dignissimos </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="./asset/features-illustration-2.webp" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="me-5 ms-2">
-                                <p class="mb-1 me-5">Call us anytime</p>
-                                <p class="mb-1 me-5 ">+123 456-789</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card border-0">
+                            <div class="row">
+                                <div class="d-flex featuresContainer ">
+                                    <div class="card-body mt-4 pe-5" style="width: 80%;">
+                                        <h1 class=" pb-3" style="text-align: start;">Lorem ipsum dolor sit amet </h1>
+                                        <div class="my-2" style="border: 2.3px solid blue; margin-right: 80%;"></div>
+                                        <p class="card-text mt-3 mb-4">This is a wider card with supporting text below
+                                            as a natural lead-in to additional content. This content is a little bit
+                                            longer.</p>
+                                        <div class="d-flex gap-2 m-2">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16"
+                                                    style="color: #0000ff;">
+                                                    <path
+                                                        d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                                                    <path
+                                                        d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2 m-2">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16"
+                                                    style="color: #0000ff;">
+                                                    <path
+                                                        d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                                                    <path
+                                                        d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2 m-2">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16"
+                                                    style="color: #0000ff;">
+                                                    <path
+                                                        d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                                                    <path
+                                                        d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor
+                                                    sit amet consectetur adipisicing elit. Expedita libero alias
+                                                    repudiandae dignissimos </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="./asset/features-illustration-1.webp" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="d-flex w-100 flex-wrap  aboutImages">
-              <div class="position-relative">
-                <img src="./asset/about-5 (1).webp" class="aboutImage1"  alt="Responsive Image"  alt="...">
-                <img src="./asset/about-2.webp" class="aboutImage2"  alt="Responsive Image"  alt="...">
-              
-            </div>
-            </div>
-        </section>
 
+        </div>
 
-
+    </section>
 
 
 

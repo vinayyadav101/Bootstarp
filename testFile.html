@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Width Examples</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+/* Example 1: Full-Width Horizontal Line */
+.divider {
+  border-top: 5px solid black; /* Thick horizontal line */
+  width: 100%; /* Full-width */
+  margin: 20px 0; /* Space above and below */
+}
+
+/* Example 2: Custom Width Horizontal Line */
+.custom-width {
+  width: 50%; /* Custom width for the line */
+  margin: 20px auto; /* Center the line horizontally */
+}
+
+/* Example 3: Dashed Line */
+.dashed {
+  border-top: 3px dashed gray; /* Dashed horizontal line */
+  width: 75%; /* 75% width */
+  margin: 10px auto;
+}
+
+/* Example 3: Dotted Line */
+.dotted {
+  border-top: 3px dotted gray; /* Dotted horizontal line */
+  width: 60%; /* 60% width */
+  margin: 10px auto;
+}
+
+/* Example 4: Full Page Styled Horizontal Line */
+.styled-hr {
+  border: none; /* Remove default hr styles */
+  border-top: 8px solid #333; /* Thick styled horizontal line */
+  width: 100%; /* Full page width */
+  margin: 20px 0;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Border Width Examples</h1>
+
+  <!-- Example 1: Full-Width Horizontal Line -->
+  <h2>Example 1: Full-Width Horizontal Line</h2>
+  <div class="divider"></div>
+
+  <!-- Example 2: Custom Width Horizontal Line -->
+  <h2>Example 2: Custom Width Horizontal Line</h2>
+  <div class="divider custom-width"></div>
+
+  <!-- Example 3: Dashed or Dotted Border -->
+  <h2>Example 3: Dashed Line</h2>
+  <div class="divider dashed"></div>
+
+  <h2>Example 3: Dotted Line</h2>
+  <div class="divider dotted"></div>
+
+  <!-- Example 4: Full Page Horizontal Line -->
+  <h2>Example 4: Full Page Styled Horizontal Line</h2>
+  <hr class="styled-hr">
+
+</body>
+</html>
