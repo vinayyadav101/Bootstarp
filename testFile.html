@@ -3,78 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Border Width Examples</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
   <style>
-    /* General Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 20px;
-}
-
-h1, h2 {
-  color: #333;
-}
-
-/* Example 1: Full-Width Horizontal Line */
-.divider {
-  border-top: 5px solid black; /* Thick horizontal line */
-  width: 100%; /* Full-width */
-  margin: 20px 0; /* Space above and below */
-}
-
-/* Example 2: Custom Width Horizontal Line */
-.custom-width {
-  width: 50%; /* Custom width for the line */
-  margin: 20px auto; /* Center the line horizontally */
-}
-
-/* Example 3: Dashed Line */
-.dashed {
-  border-top: 3px dashed gray; /* Dashed horizontal line */
-  width: 75%; /* 75% width */
-  margin: 10px auto;
-}
-
-/* Example 3: Dotted Line */
-.dotted {
-  border-top: 3px dotted gray; /* Dotted horizontal line */
-  width: 60%; /* 60% width */
-  margin: 10px auto;
-}
-
-/* Example 4: Full Page Styled Horizontal Line */
-.styled-hr {
-  border: none; /* Remove default hr styles */
-  border-top: 8px solid #333; /* Thick styled horizontal line */
-  width: 100%; /* Full page width */
-  margin: 20px 0;
-}
-
+    .mainContainer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      background-color: orange;
+      width: 100%;
+      position: relative;
+      overflow-x: hidden;
+      padding: 1%;
+      gap: 3%;
+    }
+    .mainContainer img {
+      width: 300px;
+      height: 60px;
+    }
+    
   </style>
 </head>
 <body>
-  <h1>Border Width Examples</h1>
+  <div class="mainContainer">
+    <div class="">
+      <img src="./asset/client-1.png" alt="">
+    </div>
+    <div>
+      <img src="./asset/client-2.png" alt="">
+    </div>
+    <div class="">
+      <img src="./asset/client-3.png" alt="">
+    </div>
+    <div class="">
+      <img src="./asset/client-4.png" alt="">
+    </div>
+  </div>
 
-  <!-- Example 1: Full-Width Horizontal Line -->
-  <h2>Example 1: Full-Width Horizontal Line</h2>
-  <div class="divider"></div>
+  <button class="previus" id="previus" style="height: 20px; width: 50px;">back</button>
+  <button class="next" id="next" style="height: 20px; width: 50px;">next</button>
 
-  <!-- Example 2: Custom Width Horizontal Line -->
-  <h2>Example 2: Custom Width Horizontal Line</h2>
-  <div class="divider custom-width"></div>
+  <script>
+    const next = document.getElementById('next')
+    const previus = document.getElementById('previus')
 
-  <!-- Example 3: Dashed or Dotted Border -->
-  <h2>Example 3: Dashed Line</h2>
-  <div class="divider dashed"></div>
+    const imageFunction = (symbole)=>{
+      document.querySelectorAll('.mainContainer img').forEach((e)=>{
 
-  <h2>Example 3: Dotted Line</h2>
-  <div class="divider dotted"></div>
+      const imgNumber = Number(e.src.split('-')[1].split('.png')[0])
 
-  <!-- Example 4: Full Page Horizontal Line -->
-  <h2>Example 4: Full Page Styled Horizontal Line</h2>
-  <hr class="styled-hr">
+        if (imgNumber<8) {
+          e.src = `./asset/client-${symbole === 'positive' ? imgNumber +1 : imgNumber - 1}.png`
+        }else{
+          e.src = `./asset/client-${symbole === 'positive' ?imgNumber -7 : imgNumber + 7}.png`
+        } 
+    })
+  }
 
+  next.addEventListener('click' , ()=> imageFunction("positive"))
+  previus.addEventListener('click',()=>imageFunction('previus'))
+  </script>
 </body>
 </html>
