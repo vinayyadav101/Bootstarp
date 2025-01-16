@@ -123,14 +123,27 @@
             text-align: center;
         }
         .pricing> :nth-child(2){
-            margin: 3rem;
-            padding: 3rem;
+            padding: 6rem;
         }
         .contactSection{
             padding: 3rem;
         }
+        .pricingHeading hr ,
+        .testimonialsHeading hr,
+        .contactHading hr{
+            margin-left: 48%; 
+            margin-right: 48%; 
+            border: 3px solid darkblue; 
+        }
 
         @media (max-width: 576px) {
+            .pricingHeading hr ,
+            .testimonialsHeading hr,
+            .contactHading hr{
+            margin-left: 44%; 
+            margin-right: 44%; 
+            border: 3px solid darkblue; 
+        }
             .offcanvas {
                 align-items: normal;
             }
@@ -227,8 +240,7 @@
                 padding: 0;
             }
             .pricing> :nth-child(2){
-            margin: 1rem;
-            padding: 1rem;
+            padding: 2rem;
         }
         }
     </style>
@@ -941,14 +953,14 @@
 
 
 
-    <section class="testimonial m-0 ">
+    <section class="testimonial">
         <div class="testimonials " style="background-color: #f3f9ff;">
             <div class="testimonialsHeading pt-4">
                 <h1 style="font-size: xxx-large;">testimonials</h1>
-                <hr style="margin-left: 45%; margin-right: 45%; border: 3px solid darkblue; ">
+                <hr>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ab rerum libero, provident fuga</p>
             </div>
-            <div class="d-flex flex-row justify-content-between flex-wrap m-4">
+            <div class="d-flex flex-row justify-content-between flex-wrap p-4">
                 <div class="cards col-lg-6 p-2">
                     <div class="p-4 shadow" style="background-color: white;">
                         <div class="d-flex gap-3 align-items-center">
@@ -1153,7 +1165,7 @@
                                 </svg>
                                 Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
                                 minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
-                                labore illum veniam
+                                labore
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                                     class="bi bi-quote" viewBox="0 0 16 16" style="transform: scale(-1,-1);">
                                     <path
@@ -1169,14 +1181,14 @@
     </section>
 
 
-    <section class="services m-0 ">
+    <section class="services">
         <div class="testimonials " style="background-color: #f3f9ff;">
             <div class="testimonialsHeading pt-4">
                 <h1 style="font-size: xxx-large;">Services</h1>
-                <hr style="margin-left: 45%; margin-right: 45%; border: 3px solid darkblue; ">
+                <hr>
                 <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
             </div>
-            <div class="d-flex flex-row justify-content-between flex-wrap m-4">
+            <div class="d-flex flex-row justify-content-between flex-wrap p-4">
                 <div class="cards col-lg-6 p-2">
                     <div class="p-4 rounded-4" style="background-color: white;">
                         <div class="card-body d-flex flex-row">
