@@ -46,13 +46,35 @@ Bootstarp/
 ├── index.html     # Main HTML file
 └── README.md      # Project documentation (this file)
 ```
-## 🖼️ Screenshots
-🖥️ Desktop View
-![Example Image]()
+
+## 🖥️ Desktop View screenshots
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/cd75ca38d716299e307fa7b882c6d60e3962260e/1.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/cd75ca38d716299e307fa7b882c6d60e3962260e/2.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/cd75ca38d716299e307fa7b882c6d60e3962260e/3.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/cd75ca38d716299e307fa7b882c6d60e3962260e/4.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/cd75ca38d716299e307fa7b882c6d60e3962260e/5.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/cd75ca38d716299e307fa7b882c6d60e3962260e/6.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/cd75ca38d716299e307fa7b882c6d60e3962260e/7.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/cd75ca38d716299e307fa7b882c6d60e3962260e/8.png)
 
 
-📱 Mobile View
+## 📱 Mobile View screenshots
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/1.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/2.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/3.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/4.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/5.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/6.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/7.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/8.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/9.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/10.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/11.png)
+![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/12.png)
 
+
+
+https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/1.png
 
 ## 🤝 Contribution
 Contributions are welcome! 🎉 If you'd like to improve this template or add new features, feel free to fork the repository and submit a pull request. Please ensure your contributions align with the project's objectives and follow the coding standards.
