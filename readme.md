@@ -73,9 +73,6 @@ Bootstarp/
 ![Example Image](https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/12.png)
 
 
-
-https://github.com/vinayyadav101/projectImages/blob/41ace05bf5b957a99990173263403a3bb559b5be/bootstrap/mobile/1.png
-
 ## 🤝 Contribution
 Contributions are welcome! 🎉 If you'd like to improve this template or add new features, feel free to fork the repository and submit a pull request. Please ensure your contributions align with the project's objectives and follow the coding standards.
 
@@ -89,4 +86,5 @@ This project is licensed under the MIT License. You are free to use, modify, and
 If you have any questions, feedback, or issues regarding this project, feel free to reach out:
 
 📧 Email: vinay60242@gmail.com
+
 🧑‍💻 GitHub: Vinay Yadav
